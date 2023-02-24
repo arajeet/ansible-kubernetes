@@ -1,4 +1,16 @@
-#Ansible  Kubernetes
+# Ansible  Kubernetes
+
+
+## Setup SSH-KEYGEN for password less login
+
+``` {.sh}
+ssh-keygen -t ed25519 -C "ansible key"
+ls -lrt  ~/.ssh/*
+ssh-copy-id ~/.ssh/ed25519.pub 192.168.2.65
+ssh-copy-id ~/.ssh/ed25519.pub 192.168.2.77
+
+```
+
 
 ## First Command
 
