@@ -25,3 +25,10 @@ ansible all --key-file ~/.ssh/ansible -i inventory  -m ping
 ansible all -m gather_facts
 ansible all -m gather_facts --limit  192.168.2.65
 ```
+## Become Users
+
+become allows us to elevate the privellege
+
+``` {.sh}
+ansible all -m  apt -a update_cache=true --become --ask-become-pass 
+```
