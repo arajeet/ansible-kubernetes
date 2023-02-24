@@ -31,4 +31,7 @@ become allows us to elevate the privellege
 
 ``` {.sh}
 ansible all -m  apt -a update_cache=true --become --ask-become-pass 
+ansible all -m  apt -a "name=vim-nox"  --become --ask-become-pass
+ansible all -m  apt -a "name=snapd state=latest"  --become --ask-become-pass
+
 ```
